@@ -1,0 +1,6 @@
+rm -rf html
+mkdir html
+cp -r ../dist/*  ./html
+
+sudo docker build -t startupautobahn/nginx .
+

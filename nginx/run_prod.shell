@@ -1,0 +1,9 @@
+rm -rf html
+mkdir html
+cp -r ../dist/*  ./html
+
+sudo docker build -t startupautobahn/nginx .
+
+docker rm -f nginx
+
+docker run --name=nginx -d -p 80:80 -v ~/startupautobahn/nginx/logs:/logs --link backend:api startupautobahn/nginx
