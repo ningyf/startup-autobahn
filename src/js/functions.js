@@ -122,12 +122,25 @@
 			return point
 		}
 		var index;
+    	var originStyle = '';
 		$(document).on('click', '.program__dates__list__item', function () {
-		    $('.program__dates__list__mask').show();
+		    if ($(this).hasClass('is--active')) {
+		        return
+            }
 			index = $(this).index()
 			if (index > 0) {
+		        $('#go__program__dates')[0].click();
+                $('.program__dates__list__mask').show();
+			    originStyle = $(this).attr('style');
+                $(this).after($(this)[0].outerHTML);
+                var target = $(this).next()
+                target.addClass('is--active')
+                target.css({
+                    transform: 'translate3d(640px, 300px, 0)',
+                    'margin-top': 0,
+                    'z-index': 9999
+                });
                 $(this).hide();
-                $(this).after($(this)[0].outerHTML)
                 var el =  $($('.program__dates__list__imgs li')[index-1]);
                 var sum = el.children().length
                 var point = calculate(300, sum)
@@ -150,6 +163,7 @@
             $(this).hide();
             if (index > 0) {
                 $($('.program__dates__list__item')[index]).show();
+                $($('.program__dates__list__item')[index + 1]).remove();
                 var el =  $($('.program__dates__list__imgs li')[index-1])
                 el.children('img').each(function () {
                     $(this).css({

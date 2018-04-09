@@ -3832,11 +3832,11 @@ a.contact_box_weixin {
     }
 }
 
-@media only screen and (min-width: 1025px) {
-    .about__subtext {
-        padding-left: 120px
-    }
-}
+/*@media only screen and (min-width: 1025px) {*/
+    /*.about__subtext {*/
+        /*padding-left: 120px*/
+    /*}*/
+/*}*/
 
 /*.about__lane {*/
 /*margin-bottom: 150px*/
@@ -4036,15 +4036,14 @@ a.contact_box_weixin {
 
 .program__dates {
     box-sizing: content-box;
-    margin-top: -75px;
-    padding-top: 250px;
-    padding-bottom: 200px;
-    margin-bottom: -100px;
+    padding-top: 150px;
     position: relative;
     z-index: 300;
     max-width: 1260px;
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
+    /*overflow: hidden;*/
+    outline: none;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -4084,7 +4083,8 @@ a.contact_box_weixin {
 }
 
 .program__dates__list {
-    text-align: center
+    text-align: center;
+    outline: none;
 }
 
 @media only screen and (max-width: 767px) {
@@ -4236,10 +4236,10 @@ a.contact_box_weixin {
     }
 }
 
-.program__dates__list__item.is--active h3 {
-    font-size: 28px;
-    line-height: 30px
-}
+/*.program__dates__list__item.is--active h3 {*/
+    /*font-size: 28px;*/
+    /*line-height: 30px*/
+/*}*/
 
 @media only screen and (max-width: 767px) {
     .program__dates__list__item.is--active h3 {
@@ -4977,6 +4977,46 @@ a.contact_box_weixin {
 
     .partners__map .partners__map__item.partners__map__item--4 .partners__map__text:after,
     .partners__map .partners__map__item.partners__map__item--4 .partners__map__text:before {
+        left: 115px
+    }
+}
+
+.partners__map .partners__map__item.partners__map__item--5 {
+    top: 40%;
+    left: 55%
+}
+
+@media only screen and (max-width: 767px) {
+    .partners__map .partners__map__item.partners__map__item--5 {
+        left: 71%
+    }
+
+    .partners__map .partners__map__item.partners__map__item--5 .partners__map__text {
+        margin-left: -115px
+    }
+
+    .partners__map .partners__map__item.partners__map__item--5 .partners__map__text:after,
+    .partners__map .partners__map__item.partners__map__item--5 .partners__map__text:before {
+        left: 115px
+    }
+}
+
+.partners__map .partners__map__item.partners__map__item--6 {
+    top: 71%;
+    left: 52%
+}
+
+@media only screen and (max-width: 767px) {
+    .partners__map .partners__map__item.partners__map__item--6 {
+        left: 68%
+    }
+
+    .partners__map .partners__map__item.partners__map__item--6 .partners__map__text {
+        margin-left: -115px
+    }
+
+    .partners__map .partners__map__item.partners__map__item--6 .partners__map__text:after,
+    .partners__map .partners__map__item.partners__map__item--6 .partners__map__text:before {
         left: 115px
     }
 }
@@ -5950,11 +5990,11 @@ a.contact_box_weixin {
 }
 
 .register-form section {
-    overflow: auto;
+    overflow: hidden;
     position: absolute;
     top: -480px;
-    right: -50px;
-    bottom: -90px;
+    right: -65px;
+    bottom: -70px;
     left: -50px;
     z-index: 1;
 }
